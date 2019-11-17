@@ -1,0 +1,10 @@
+img = imread('1-512.jpg');
+img = int16(img);
+img = uint8(img);
+[w h] = size(img);
+% imshow(img);
+% hold on;
+% imshow(img(1: 2 : end, 1 : 2 :end));
+hold on;
+nearImg = nearestNeighbor(img, 1.5);
+imshow(nearImg);
