@@ -38,7 +38,7 @@ image processing class homework
 
 #### Input
 
-<img src="project/content.jpg" alt="content image" style="zoom:50%;" />
+<img src="project/content.jpg" alt="content image" style="zoom:20%;" />
 
 <img src="project/style.jpg" alt="style image" style="zoom:100%;" />
 
@@ -46,17 +46,27 @@ image processing class homework
 
 #### Normal
 
+<img src="project/output/normal/result.png" alt="content image" style="zoom:50%;" />
+
 #### Normal With High Style Weight
+
+<img src="project/output/normal-with-high-style-weight/normal-with-high-style-weight-result.png" alt="content image" style="zoom:20%;" />
 
 #### With Sobel Hight Total Variation Weight
 
+<img src="project/output/with-sobel-hight-total-variation-weight/with-sobel-plot.png" alt="content image" style="zoom:50%;" />
+
 #### With Sobel Low Total Variation Weight
+
+<img src="project/output/with-sobel-low-total-variation-weight/result.png" alt="content image" style="zoom:50%;" />
 
 #### Final Normal With Sobel
 
+<img src="project/output/final-normal-with-sobel/result.png" alt="content image" style="zoom:50%;" />
+
 #### Fast Style Transfer(base on Tensorflow hub)
 
-
+<img src="project/output/fast-style-transfer/result.png" alt="content image" style="zoom:50%;" />
 
 ## Reference
 
@@ -77,4 +87,3 @@ https://www.tensorflow.org/tutorials/generative/style_transfer
 [TensorFlow之深入理解Fast Neural Style](https://zhuanlan.zhihu.com/p/30486310)
 
 [deeplearning.al 卷积神经网络课程](https://www.coursera.org/specializations/deep-learning)
-
