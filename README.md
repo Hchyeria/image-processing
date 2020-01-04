@@ -87,3 +87,8 @@ https://www.tensorflow.org/tutorials/generative/style_transfer
 [TensorFlow之深入理解Fast Neural Style](https://zhuanlan.zhihu.com/p/30486310)
 
 [deeplearning.al 卷积神经网络课程](https://www.coursera.org/specializations/deep-learning)
+
+[动手学深度学习课程](http://zh.d2l.ai/chapter_computer-vision/neural-style.html)
+
+[Understanding your Convolution network with Visualizations](https://towardsdatascience.com/understanding-your-convolution-network-with-visualizations-a4883441533b)
+

@@ -9,7 +9,7 @@ from tensorflow.keras.preprocessing.image import load_img, img_to_array
 plt.figure(figsize=(12, 6))
 
 plt.subplot(1, 2, 1)
-plt.imshow(load_img('./style.jpg'))
+plt.imshow(load_img('./style2.jpg'))
 plt.axis('off')
 
 plt.subplot(1, 2, 2)
@@ -99,7 +99,7 @@ def high_pass_x_y(image):
     return x_var, y_var
 
 
-total_variation_weight = 1e8
+total_variation_weight = 1e-4
 
 
 def total_variation_loss(image):
@@ -122,7 +122,7 @@ def compute_loss(
                              for name in content_outputs.keys()])
     content_loss *= content_weight / num_content_layers
     total_loss = style_loss + content_loss
-    # total_loss += total_variation_weight * total_variation_loss(init_img)
+    total_loss += total_variation_weight * total_variation_loss(init_img)
     return total_loss, style_loss, content_loss
 
 
@@ -173,8 +173,8 @@ import IPython.display
 
 
 
-def run_style_transfer(content_path, style_path, n_iterations=300,
-                       content_weight=1e4, style_weight=1e-4,
+def run_style_transfer(content_path, style_path, n_iterations=400,
+                       content_weight=1e5, style_weight=1e-2,
                        display_iterations=True):
     extractor = StyleContentModel(style_layers, content_layers)
 
@@ -300,7 +300,7 @@ def imshow2(image, title=None):
 # imshow2(clip_0_1(2*x_deltas+0.5), "Vertical Deltas: Styled")
 
 
-best_img, best_loss = run_style_transfer('./content.jpg', './style.jpg', style_weight=1e-1)
+best_img, best_loss = run_style_transfer('./content.jpg', './style2.jpg')
 print(best_loss.numpy())
 
 plt.figure(figsize=(10, 10))
